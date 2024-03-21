@@ -4,72 +4,66 @@ import pandas as pd
 #Usual Criterion
 def compara(ai,aj):
   d = ai - aj
-  if (max):
-    if d <= 0:
-      F = 0 # D <= 0
-    elif d > 0: #se D > 0
-      F = 1
+  if d <= 0:
+    F = 0 # D <= 0
+  elif d > 0: #se D > 0
+    F = 1
 
   return F
 
 #U-shape Criterion
 def compara_2(ai,aj,q):
   d = ai - aj
-  if (max):
-    if d <= q:
-      F = 0 # D <= 0
-    elif d > q: #se D > 0
-      F = 1
+  if d <= q:
+    F = 0 # D <= 0
+  elif d > q: #se D > 0
+    F = 1
 
   return F
 
 #V-shape Criterion
 def compara_3(ai,aj,q):
   d = ai - aj
-  if (max):
-    if d <= 0:
-      F = 0
-    elif d >= 0 and d <= q:
-      F = d / q
-    elif d > q:
-      F = 1
+  if d <= 0:
+    F = 0
+  elif d >= 0 and d <= q:
+    F = d / q
+  elif d > q:
+    F = 1
 
   return F
 
 #Level Criterion
 def compara_4(ai,aj,q,p):
   d = ai - aj
-  if (max):
-    if d <= q:
-      F = 0
-    elif q < d and d <= p:
-      F = 0.5
-    elif d > p:
-      F = 1
+  if d <= q:
+    F = 0
+  elif q < d and d <= p:
+    F = 0.5
+  elif d > p:
+    F = 1
 
   return F
 
 #V-Shape with indiference criterion
 def compara_5(ai,aj,q,p):
   d = ai - aj
-  if (max):
-    if d <= q:
-      F = 0
-    elif q < d and d <= p:
-      F = (d-q)/(p-q)
-    elif d > p:
-      F = 1
+  if d <= q:
+    F = 0
+  elif q < d and d <= p:
+    F = (d-q)/(p-q)
+  elif d > p:
+    F = 1
 
   return F
 
 #Gaussion Criterion
 def compara_6(ai,aj,s):
   d = ai - aj
-  if (max):
-    if d <= 0:
-      F = 0
-    elif d > 0:
-      F = 1 - math.exp(-d ** 2/((2*s)**2))
+  if d <= 0:
+    F = 0
+  elif d > 0:
+    F = 1 - math.exp(-d ** 2/((2*s)**2))
 
   return F
 
